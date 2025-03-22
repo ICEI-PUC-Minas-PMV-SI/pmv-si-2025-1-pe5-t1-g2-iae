@@ -7,18 +7,19 @@
 
 `Eixo: 5`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolvimento da infraestrutura de redes do Instituto Acadêmico de Excelência (IAE), uma universidade com sede em Belo Horizonte (MG) e campi na região metropolitana.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Antônio Rubens Oliveira Junqueira
+* Arthur Neves da Silveira
+* Beatriz Pereira da Costa
+* Denis Alves da Silva Leite
+* Laís Lara Ferreira dos Santos
+* Sávio Sérgio Pereira da Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+* Fábio Leandro Rodrigues Cordeiro
 
 
