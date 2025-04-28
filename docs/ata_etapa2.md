@@ -40,7 +40,7 @@ Laís Lara Ferreira dos Santos
 - Gravação dos videos de demostração e testes das máquinas virtuais na nuvem;
 - Revisão dos documentos da entrega 2.
 
-# Beatriz Pereira da Costa
+Beatriz Pereira da Costa
 
 - Participei do subgrupo responsável pela configuração de serviços de rede e servidores na AWS.
 - Trabalhei na instalação e configuração do **BIND9** para o serviço DNS, criando as zonas e realizando testes para garantir que a configuração estava correta.
