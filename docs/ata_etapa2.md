@@ -55,8 +55,8 @@ Arthur Neves da Silveira
 
 - Participante do grupo de rede local;
 - Instalei o Virtualbox e configurei: 
- - Ubuntu Server: Instalção e configuração de pacotes de rede e serviços DHCP;
- - Windows Server 2019: Instalação e configuração de serviço de DNS;
- - Windows 10 Pro: Teste de Máquinas clientes e configuração de rede e domínio;
+  - Ubuntu Server: Instalção e configuração de pacotes de rede e serviços DHCP;
+  - Windows Server 2019: Instalação e configuração de serviço de DNS;
+  - Windows 10 Pro: Teste de Máquinas clientes e configuração de rede e domínio;
 - Redigi partes dos processos no documento de entrega;
 
