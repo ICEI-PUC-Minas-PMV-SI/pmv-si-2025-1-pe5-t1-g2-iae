@@ -29,6 +29,21 @@ Sávio Sérgio Pereira da Silva:
 - Gravei o video demostrando as instalações;
 - Revisei os documentos.
 
+Laís Lara Ferreira dos Santos
+
+- Participei do subgrupo responsável pela configuração de serviços de rede e servidores na AWS;
+- Criação de duas instâncias no EC2 da AWS com o sistema operacional Ubuntu;
+- Configuração dos grupos de segurança das instâncias;
+- Estudo, instalação e configuração dos seguintes serviços nas máquina virtuais da AWS:
+   - Servidor Web (Apache)
+   - FTP (utilizando Filezilla)
+   - DNS
+   - Banco de Dados (PostgreSQL)
+   - NFS (servidor e cliente)
+   - Proxy e Cache
+- Gravação dos videos de demostração e testes das máquinas virtuais na nuvem;
+- Revisão dos documentos da entrega 2.
+
 # Beatriz Pereira da Costa
 
 - Participei do subgrupo responsável pela configuração de serviços de rede e servidores na AWS.
