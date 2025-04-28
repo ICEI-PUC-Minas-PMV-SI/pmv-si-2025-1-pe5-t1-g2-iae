@@ -50,6 +50,7 @@ Beatriz Pereira da Costa
 - Instalei e configurei o **PostgreSQL**, criando bancos de dados e usuários com permissões específicas para manipulação e acesso aos dados.
 - Instalei e configurei o **vsftpd** para permitir a transferência de arquivos via FTP, criando usuários e liberando as portas necessárias no firewall da AWS.
 - Implementei a infraestrutura de **Servidor Web** na AWS, criando instâncias EC2, instalando o Apache, configurando o acesso SSH e realizando testes de conexão ao servidor web.
+- Fiz o passo a passo dos serviços no documento da entrega 2.
 
 Arthur Neves da Silveira
 
