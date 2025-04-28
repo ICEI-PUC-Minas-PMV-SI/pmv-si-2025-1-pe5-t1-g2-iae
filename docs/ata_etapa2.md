@@ -20,3 +20,11 @@ Denis Alves da Silva Leite:
 - Instalei e configurei o LDAP, utilizando o OpenLDAP.
 - Testei todas as configurações no Windows 10, funcionando perfeitamente.
 - Contribuí ajudando outros integrantes do grupo nas configurações.
+
+Sávio Sérgio Pereira da Silva:
+
+- Grupo de rede local;
+- Instalação da virtualização Virtualbox com a segmentação de redes A, B e C para Alunos, funcionários e Servidores;
+- Trabalhei na instalação dos seguintes serviços no local: No Windows Server foram DNS e AD DS, no Ubuntu Server foram o roteamento entre as máquinas e o serviço de DHCP e instalação de duas máquinas cliente com Windows 10 Pro;
+- Gravei o video demostrando as instalações;
+- Revisei os documentos.
