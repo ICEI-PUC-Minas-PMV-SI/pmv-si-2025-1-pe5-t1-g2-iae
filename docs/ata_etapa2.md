@@ -23,6 +23,18 @@ Denis Alves da Silva Leite:
 
 Sávio Sérgio Pereira da Silva:
 
+# Beatriz Pereira da Costa
+
+- Participei do subgrupo responsável pela configuração de serviços de rede e servidores na AWS.
+- Trabalhei na instalação e configuração do **BIND9** para o serviço DNS, criando as zonas e realizando testes para garantir que a configuração estava correta.
+- Configurei o **Squid** como servidor proxy na AWS, realizando a instalação e configuração para permitir tráfego de rede e controlar o acesso por IPs.
+- Implementei a configuração de **Cache** no **Squid**, otimizando a rede para armazenar conteúdos frequentemente acessados e melhorar a performance.
+- Configurei o **NFS** entre duas instâncias EC2 na AWS, configurando tanto o servidor NFS quanto a máquina cliente para o compartilhamento de arquivos.
+- Instalei e configurei o **PostgreSQL**, criando bancos de dados e usuários com permissões específicas para manipulação e acesso aos dados.
+- Instalei e configurei o **vsftpd** para permitir a transferência de arquivos via FTP, criando usuários e liberando as portas necessárias no firewall da AWS.
+- Implementei a infraestrutura de **Servidor Web** na AWS, criando instâncias EC2, instalando o Apache, configurando o acesso SSH e realizando testes de conexão ao servidor web.
+
+
 - Grupo de rede local;
 - Instalação da virtualização Virtualbox com a segmentação de redes A, B e C para Alunos, funcionários e Servidores;
 - Trabalhei na instalação dos seguintes serviços no local: No Windows Server foram DNS e AD DS, no Ubuntu Server foram o roteamento entre as máquinas e o serviço de DHCP e instalação de duas máquinas cliente com Windows 10 Pro;
