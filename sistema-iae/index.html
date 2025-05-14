@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Acadêmico de Excelência - 30 Anos de Excelência</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header com menu de navegação -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="./img/brasão-iae.png" alt="Logo Universidade IAE">
+                <div class="logo-text">
+                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+                    <p>30 anos transformando vidas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#research">Pesquisa</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2>30 Anos de Excelência Acadêmica</h2>
+                <p>O IAE tem orgulho de três décadas formando profissionais qualificados e contribuindo para o desenvolvimento da nossa sociedade.</p>
+                <a href="#about" class="btn">Conheça nossa história</a>
+            </div>
+        </section>
+
+        <!-- Seção de aniversário -->
+        <section class="anniversary" id="about">
+            <div class="anniversary-container">
+                <h2 class="section-title">Nossa Jornada</h2>
+                <div class="anniversary-content">
+                    <div class="anniversary-text">
+                        <h3>Três Décadas de Transformação</h3>
+                        <p>Fundada em 1993, o Instituto Acadêmico de Excelência surgiu com o propósito de oferecer educação de qualidade acessível a todos. Ao longo desses 30 anos, nos tornamos referência em ensino superior, com mais de 50 mil profissionais formados.</p>
+                        <p>Nossa missão sempre foi combinar excelência acadêmica com responsabilidade social e ambiental, valores que estão refletidos em nosso nome e em todas as nossas ações.</p>
+                        <p>Hoje, oferecemos mais de 30 cursos de graduação, 15 programas de pós-graduação e mantemos parcerias com instituições em todo o mundo.</p>
+                    </div>
+                    <div class="anniversary-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Estudantes da Universidade IAE">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de números -->
+        <section class="numbers">
+            <div class="numbers-container">
+                <h2 class="section-title">Nossos Números</h2>
+                <div class="numbers-grid">
+                    <div class="number-item">
+                        <div class="number">30</div>
+                        <p>Anos de história</p>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">50k+</div>
+                        <p>Profissionais formados</p>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">120</div>
+                        <p>Laboratórios especializados</p>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">95%</div>
+                        <p>Taxa de empregabilidade</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="./img/brasão-iae.png" alt="Logo Universidade IAE">
+                    <div class="footer-logo-text">
+                        <h3>Instituto Acadêmico de Excelência</h3>
+                    </div>
+                </div>
+                <p>Transformando vidas através da educação há 30 anos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#research">Pesquisa</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Rua do Conhecimento, 123</p>
+                <p>Bairro Universitário</p>
+                <p>CEP: 12345-678</p>
+                <p>contato@universidadeiae.edu.br</p>
+                <p>(31) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Instituto Acadêmico de Excelência - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animação ao rolar a página
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.anniversary-text, .anniversary-image, .number-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+        };
+
+        // Verifica a posição dos elementos quando a página carrega
+        window.addEventListener('load', animateOnScroll);
+        // Verifica a posição dos elementos quando ocorre scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Suaviza o scroll para os links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

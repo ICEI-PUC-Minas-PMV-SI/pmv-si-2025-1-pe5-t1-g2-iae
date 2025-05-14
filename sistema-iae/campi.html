@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Verde - 30 Anos de Excelência</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --verde-primario: #006341;
+            --verde-secundario: #008a50;
+            --verde-claro: #e0f2e9;
+            --branco: #ffffff;
+            --preto: #333333;
+            --cinza: #f5f5f5;
+        }
+
+        body {
+            background-color: var(--cinza);
+            color: var(--preto);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--verde-primario);
+            color: var(--branco);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background-color: rgba(0, 99, 65, 0.95);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Menu de navegação */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--verde-claro);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--verde-claro);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Conteúdo principal */
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            padding: 0 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: slideUp 1.2s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--verde-primario);
+            color: var(--branco);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--verde-primario);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--branco);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Seção de aniversário */
+        .anniversary {
+            background-color: var(--branco);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .anniversary-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: var(--verde-primario);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--verde-secundario);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .anniversary-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .anniversary-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            text-align: left;
+            animation: slideLeft 1s ease-in-out;
+        }
+
+        .anniversary-text h3 {
+            color: var(--verde-primario);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .anniversary-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            animation: slideRight 1s ease-in-out;
+        }
+
+        .anniversary-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .anniversary-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Seção de números */
+        .numbers {
+            background-color: var(--verde-primario);
+            color: var(--branco);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .numbers-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .number-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .number-item:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--verde-claro);
+        }
+
+        /* Seção de Campi */
+        .campuses {
+            background-color: var(--branco);
+            padding: 5rem 2rem;
+        }
+
+        .campuses-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .campus-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .campus-tab {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--cinza);
+            border: none;
+            border-radius: 30px;
+            margin: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .campus-tab:hover {
+            background-color: var(--verde-claro);
+        }
+
+        .campus-tab.active {
+            background-color: var(--verde-primario);
+            color: var(--branco);
+        }
+
+        .campus-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .campus-content.active {
+            display: block;
+        }
+
+        .campus-info {
+            background-color: var(--cinza);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .campus-info h3 {
+            color: var(--verde-primario);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .courses-list, .labs-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .courses-list li, .labs-list li {
+            background-color: var(--branco);
+            padding: 0.8rem;
+            border-radius: 5px;
+            list-style: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .courses-list li:hover, .labs-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .campus-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .footer-logo-text h3 {
+            font-size: 1.2rem;
+        }
+
+        .footer-links h4 {
+            color: var(--verde-claro);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links ul li a {
+            color: var(--branco);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--verde-claro);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideLeft {
+            from { 
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideRight {
+            from { 
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .anniversary-content {
+                flex-direction: column;
+            }
+
+            .anniversary-text, .anniversary-image {
+                min-width: 100%;
+            }
+
+            .courses-list, .labs-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com menu de navegação -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/60x60/006341/ffffff?text=UV" alt="Logo Universidade Verde">
+                <div class="logo-text">
+                    <h1>Universidade Verde</h1>
+                    <p>30 anos transformando vidas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Conheça Nossos Campi</h2>
+                <p>Quatro localizações estratégicas oferecendo infraestrutura completa e excelência acadêmica.</p>
+                <a href="#campi" class="btn">Ver Campi</a>
+            </div>
+        </section>
+
+        <!-- Seção de Campi -->
+        <section class="campuses" id="campi">
+            <div class="campuses-container">
+                <h2 class="section-title">Nossos Campi</h2>
+                
+                <div class="campus-tabs">
+                    <button class="campus-tab active" data-tab="campus1">Campus 1 (Sede)</button>
+                    <button class="campus-tab" data-tab="campus2">Campus 2</button>
+                    <button class="campus-tab" data-tab="campus3">Campus 3</button>
+                    <button class="campus-tab" data-tab="campus4">Campus 4</button>
+                </div>
+                
+                <!-- Campus 1 -->
+                <div class="campus-content active" id="campus1">
+                    <div class="campus-info">
+                        <h3>Campus 1 - Sede Universitária</h3>
+                        <p>Nosso campus principal abriga a administração central da universidade e oferece a mais completa infraestrutura para os cursos das áreas de Saúde, Engenharias e Tecnologia.</p>
+                        
+                        <h4>Cursos de Graduação:</h4>
+                        <ul class="courses-list">
+                            <li>Administração</li>
+                            <li>Pedagogia</li>
+                            <li>Medicina</li>
+                            <li>Educação Física</li>
+                            <li>Enfermagem</li>
+                            <li>Farmácia</li>
+                            <li>Fisioterapia</li>
+                            <li>Nutrição</li>
+                            <li>Odontologia</li>
+                            <li>Psicologia</li>
+                            <li>Engenharia Civil</li>
+                            <li>Engenharia de Computação</li>
+                            <li>Engenharia de Controle e Automação</li>
+                            <li>Engenharia de Produção</li>
+                            <li>Engenharia Elétrica</li>
+                            <li>Engenharia Mecânica</li>
+                            <li>Ciência da Computação</li>
+                            <li>Sistemas de Informação</li>
+                            <li>Arquitetura e Urbanismo</li>
+                            <li>Design</li>
+                        </ul>
+                        
+                        <h4>Laboratórios e Estruturas:</h4>
+                        <ul class="labs-list">
+                            <li>Laboratório de Química</li>
+                            <li>Laboratório de Informática básica</li>
+                            <li>Laboratório de Desenvolvimento</li>
+                            <li>Sala Interativa</li>
+                            <li>Biblioteca Central</li>
+                            <li>Auditório Principal (500 lugares)</li>
+                            <li>Complexo Esportivo</li>
+                            <li>Clínica Escola de Saúde</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Campus 1 - Sede" class="campus-image">
+                </div>
+                
+                <!-- Campus 2 -->
+                <div class="campus-content" id="campus2">
+                    <div class="campus-info">
+                        <h3>Campus 2 - Centro de Humanidades</h3>
+                        <p>Especializado em cursos da área de Humanas e Comunicação, o Campus 2 oferece estrutura moderna para produção audiovisual e pesquisa em ciências humanas.</p>
+                        
+                        <h4>Cursos de Graduação:</h4>
+                        <ul class="courses-list">
+                            <li>Cinema e Audiovisual</li>
+                            <li>Publicidade e Propaganda</li>
+                            <li>Jornalismo</li>
+                            <li>História</li>
+                            <li>Geografia</li>
+                            <li>Filosofia</li>
+                            <li>Pedagogia</li>
+                        </ul>
+                        
+                        <h4>Laboratórios e Estruturas:</h4>
+                        <ul class="labs-list">
+                            <li>Laboratório Audiovisual</li>
+                            <li>Laboratório de Informática básica</li>
+                            <li>Sala Interativa</li>
+                            <li>Estúdio de TV e Rádio</li>
+                            <li>Biblioteca Especializada em Humanidades</li>
+                            <li>Auditório Multimídia</li>
+                            <li>Sala de Edição</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Campus 2" class="campus-image">
+                </div>
+                
+                <!-- Campus 3 -->
+                <div class="campus-content" id="campus3">
+                    <div class="campus-info">
+                        <h3>Campus 3 - Centro de Ciências Sociais Aplicadas</h3>
+                        <p>Focado nas áreas de negócios e direito, o Campus 3 oferece ambiente propício para o desenvolvimento de habilidades práticas em gestão e ciências sociais.</p>
+                        
+                        <h4>Cursos de Graduação:</h4>
+                        <ul class="courses-list">
+                            <li>Administração</li>
+                            <li>Ciências Contábeis</li>
+                            <li>Economia</li>
+                            <li>Direito</li>
+                            <li>Serviço Social</li>
+                        </ul>
+                        
+                        <h4>Laboratórios e Estruturas:</h4>
+                        <ul class="labs-list">
+                            <li>Laboratório de Práticas Sociais</li>
+                            <li>Laboratório de Informática básica</li>
+                            <li>Núcleo de Prática Jurídica</li>
+                            <li>Centro de Empreendedorismo</li>
+                            <li>Biblioteca de Ciências Sociais</li>
+                            <li>Sala de Simulação de Negócios</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Campus 3" class="campus-image">
+                </div>
+                
+                <!-- Campus 4 -->
+                <div class="campus-content" id="campus4">
+                    <div class="campus-info">
+                        <h3>Campus 4 - Unidade Extensionista de Saúde</h3>
+                        <p>Especializado em estágios clínicos e práticas avançadas dos cursos da área da saúde, oferecendo infraestrutura hospitalar simulada para formação prática dos alunos.</p>
+                        
+                        <h4>Cursos Atendidos (a partir do 5º período):</h4>
+                        <ul class="courses-list">
+                            <li>Medicina</li>
+                            <li>Enfermagem</li>
+                            <li>Fisioterapia</li>
+                            <li>Educação Física</li>
+                            <li>Nutrição</li>
+                            <li>Psicologia</li>
+                            <li>Farmácia</li>
+                            <li>Odontologia</li>
+                        </ul>
+                        
+                        <h4>Laboratórios e Estruturas:</h4>
+                        <ul class="labs-list">
+                            <li>Laboratório Clínico de Medicina</li>
+                            <li>Clínica de Enfermagem</li>
+                            <li>Centro de Reabilitação (Fisioterapia)</li>
+                            <li>Laboratório de Análises Clínicas</li>
+                            <li>Clínica Odontológica</li>
+                            <li>Ambulatório Multiprofissional</li>
+                            <li>Laboratório de Nutrição Clínica</li>
+                            <li>Centro de Atenção Psicológica</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Campus 4" class="campus-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/50x50/006341/ffffff?text=UV" alt="Logo Universidade Verde">
+                    <div class="footer-logo-text">
+                        <h3>Universidade Verde</h3>
+                    </div>
+                </div>
+                <p>Transformando vidas através da educação há 30 anos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Rua do Conhecimento, 123</p>
+                <p>Bairro Universitário</p>
+                <p>CEP: 12345-678</p>
+                <p>contato@universidadeverde.edu.br</p>
+                <p>(11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Universidade Verde - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Sistema de abas para os campi
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.campus-tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove a classe active de todas as tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Adiciona a classe active apenas na tab clicada
+                    this.classList.add('active');
+                    
+                    // Esconde todos os conteúdos
+                    const contents = document.querySelectorAll('.campus-content');
+                    contents.forEach(content => content.classList.remove('active'));
+                    
+                    // Mostra apenas o conteúdo correspondente
+                    const target = this.getAttribute('data-tab');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+        });
+
+        // Animação ao rolar a página
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.campus-info, .campus-image');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Verifica a posição dos elementos quando a página carrega
+        window.addEventListener('load', animateOnScroll);
+        // Verifica a posição dos elementos quando ocorre scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Suaviza o scroll para os links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
