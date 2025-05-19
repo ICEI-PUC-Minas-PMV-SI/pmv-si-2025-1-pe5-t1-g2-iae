@@ -29,6 +29,7 @@
 - Descrição no documento da etapa sobre o monitoramento do ambiente na nuvem, incluindo também o registro dos gráficos.
 
 ### Sávio Sérgio Pereira da Silva
--
--
--
+- Instalação e configuração do Zabbix;
+- Participação na formatação da estrutura do documento geral;
+- Descrição e revisão do documento da etapa sobre o monitoramento do ambiente local.
+
