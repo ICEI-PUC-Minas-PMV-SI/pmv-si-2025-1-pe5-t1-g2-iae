@@ -6,9 +6,9 @@
 -Árdua e penosa tarefa de aprender a usar o Zabbix 7.2, que não tem quase nenhuma referência no mercado, a maioria dos vídeos e textos estão em inglês e as IAs ainda não tem como ajudar muito, foram muitas tentativas e erros para configurar os host e alguns triggers e as chaves de busca. 
 
 ### Arthur Neves da Silveira
--
--
--
+-Instalação do zabbix packages no servidor ubuntun;
+-Instalção do zabbix agent para monitoramento de vm windows server;
+-Revisão de textos do documento de entrega.
 
 ### Beatriz Pereira da Costa
 - Formatação da documentação do template.
