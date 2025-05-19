@@ -21,9 +21,12 @@
 -
 
 ### Laís Lara Ferreira dos Santos
--
--
--
+- Criação de uma nova instância EC2 na AWS;
+- Instalação e configuração do Zabbix na nova instância criada;
+- Instalação e configuração do Zabbix Agent2 na MV para ser monitorada;
+- Criação de um dashboard no Zabbix com as principais informações úteis para monitoramento e análise;
+- Formatação da estrutura do documento geral, numeração e organização das etapas anteriores;
+- Descrição no documento da etapa sobre o monitoramento do ambiente na nuvem, incluindo também o registro dos gráficos.
 
 ### Sávio Sérgio Pereira da Silva
 -
