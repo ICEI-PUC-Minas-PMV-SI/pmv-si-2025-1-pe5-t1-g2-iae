@@ -11,9 +11,9 @@
 -
 
 ### Beatriz Pereira da Costa
--
--
--
+- Formatação da documentação do template.
+- Pesquisa sobre o monitoramento de máquinas com o Zabbix.
+- Realização, junto com a Laís, dos testes de monitoramento de banco de dados utilizando o Zabbix.
 
 ### Denis Alves da Silva Leite
 -
