@@ -16,9 +16,9 @@
 - Realização, junto com a Laís, dos testes de monitoramento de banco de dados utilizando o Zabbix.
 
 ### Denis Alves da Silva Leite
--
--
--
+- Instalação do Zabbix Server, Postgresql, Apache
+- Configuração do Zabbix Server e do Zabbix Agent
+- Ajuda na revisão da documentação
 
 ### Laís Lara Ferreira dos Santos
 - Criação de uma nova instância EC2 na AWS;
