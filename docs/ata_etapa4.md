@@ -1,9 +1,10 @@
 # Etapa 4: Tarefas Realizadas por Cada Membro
 
 ### Antônio Rubens Oliveira Junqueira
--
--
--
+-Elaboração de 3 dos 8 tópicos da PSI 
+-Elaboração do documento de analise de risco seguindo listagem da OWASP
+-Revisão dos documentos elaborados em conjunto com o grupo.
+-Apoio na finalizações dos trabalhos para envio.
 
 ### Arthur Neves da Silveira
 -
