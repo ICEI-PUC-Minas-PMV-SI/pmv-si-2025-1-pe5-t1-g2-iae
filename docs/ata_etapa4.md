@@ -12,7 +12,7 @@
 -
 
 ### Beatriz Pereira da Costa
--
+- Desenvolvimento dos tópicos **Confidencialidade**, **Integridade**, **Disponibilidade**, **Autenticação** e **Autorização** no documento *Política de Segurança da Informação (PSI)*.
 -
 -
 
