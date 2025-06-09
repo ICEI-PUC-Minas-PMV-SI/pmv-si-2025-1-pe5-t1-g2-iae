@@ -27,6 +27,6 @@
 -
 
 ### Sávio Sérgio Pereira da Silva
-- Elaboração dos tópicos 1.1, 3.1 e 7 da PSI
+- Elaboração dos tópicos 1.1 OBJETIVO, 3.1 CONTROLE DE ACESSO e 7 CONSCIENTIZAÇÃO E TREINAMENTO EM SEGURANÇA da PSI
 - Desenvolvimento da cartilha
 
