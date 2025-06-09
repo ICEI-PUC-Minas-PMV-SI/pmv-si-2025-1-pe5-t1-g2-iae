@@ -22,9 +22,10 @@
 -
 
 ### Laís Lara Ferreira dos Santos
--
--
--
+- Descrição dos tópicos 4.1 (Política de Segurança da Informação (PSI)) e 4.2 (Cartilha de Boas Práticas de Acesso Seguro) no documento principal do projeto;
+- Descrição dos tópicos 9 (CONFORMIDADE LEGAL E REGULATÓRIA) e 10 (RESPONSABILIDADES) da Política de Segurança da Informação;
+- Revisão e ajustes na Cartilha de Acesso Seguro;
+- Revisão e ajustes finais no documento principal do projeto.
 
 ### Sávio Sérgio Pereira da Silva
 - Elaboração dos tópicos 1.1 OBJETIVO, 3.1 CONTROLE DE ACESSO e 7 CONSCIENTIZAÇÃO E TREINAMENTO EM SEGURANÇA da PSI
