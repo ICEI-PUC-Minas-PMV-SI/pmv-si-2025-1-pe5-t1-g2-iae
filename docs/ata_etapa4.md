@@ -27,7 +27,6 @@
 -
 
 ### Sávio Sérgio Pereira da Silva
--
--
--
+- Elaboração dos tópicos 1.1, 3.1 e 7 da PSI
+- Desenvolvimento da cartilha
 
