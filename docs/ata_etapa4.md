@@ -7,7 +7,7 @@
 -Apoio na finalizações dos trabalhos para envio.
 
 ### Arthur Neves da Silveira
--
+-Elaborção do tópico 4 (Segurança Física e Ambiental) da PSI;
 -
 -
 
