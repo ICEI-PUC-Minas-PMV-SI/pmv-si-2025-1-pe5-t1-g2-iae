@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/contato.css">
+    <title>Contato - Instituto Acadêmico de Excelência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header igual ao site principal -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
+                <div class="logo-text">
+                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+                    <p>30 anos transformando vidas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <!-- <li><a href="index.html#about">Sobre</a></li> -->
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="pesquisa-e-extensao.html" class="active">Pesquisa e Extensão</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Sistemas</a>
+                        <div class="dropdown-content">
+                            <a href="https://portaldoaluno.universidadeverde.edu.br" target="_blank">Portal do Aluno</a>
+                            <a href="https://portalprof.universidadeverde.edu.br" target="_blank">Portal do Professor</a>
+                            <a href="https://biblioteca.universidadeverde.edu.br" target="_blank">Biblioteca Virtual</a>
+                        </div>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Fale Conosco</h1>
+                <p>Estamos aqui para responder suas dúvidas e receber suas sugestões</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>Endereço</h3>
+                            <p>Rua do Conhecimento, 123<br>Bairro Universitário<br>CEP: 12345-678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>E-mail</h3>
+                            <p>contato@universidadeverde.edu.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-text">
+                            <h3>Telefone</h3>
+                            <p>(31) 1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Sua mensagem foi enviada com sucesso! Em breve entraremos em contato.
+                </div>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <span class="error-message" id="nameError">Por favor, insira seu nome completo</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <span class="error-message" id="emailError">Por favor, insira um e-mail válido</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assunto *</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="admissao">Admissão e Matrículas</option>
+                            <option value="cursos">Cursos e Programas</option>
+                            <option value="financeiro">Assuntos Financeiros</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <span class="error-message" id="subjectError">Por favor, selecione um assunto</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                        <span class="error-message" id="messageError">Por favor, escreva sua mensagem</span>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer - manter igual ao site principal -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="./img/brasão-iae.png" alt="Logo Universidade IAE">
+                    <div class="footer-logo-text">
+                        <h3>Instituto Acadêmico de Excelência</h3>
+                    </div>
+                </div>
+                <p>Transformando vidas através da educação há 30 anos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="campi.html#campi">Cursos</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa&Extensão</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Rua do Conhecimento, 123</p>
+                <p>Bairro Universitário</p>
+                <p>CEP: 12345-678</p>
+                <p>contato@universidadeiae.edu.br</p>
+                <p>(31) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Instituto Acadêmico de Excelência - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Validação do formulário
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset erros anteriores
+            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
+            
+            // Validação dos campos
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            
+            if (!name.value.trim()) {
+                name.classList.add('error');
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                email.classList.add('error');
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!subject.value) {
+                subject.classList.add('error');
+                document.getElementById('subjectError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!message.value.trim()) {
+                message.classList.add('error');
+                document.getElementById('messageError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Simular envio para o servidor
+                simulateFormSubmission();
+            }
+        });
+        
+        // Função para simular o envio do formulário
+        function simulateFormSubmission() {
+            // Mostrar mensagem de sucesso
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Rolagem suave para a mensagem
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            
+            // Limpar formulário
+            document.getElementById('contactForm').reset();
+            
+            // Aqui você normalmente faria uma requisição AJAX para o backend
+            // Exemplo com fetch (descomente e ajuste quando implementar o backend real):
+            /*
+            const formData = new FormData(document.getElementById('contactForm'));
+            
+            fetch('https://sua-api.com/contato', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+            */
+        }
+    </script>
+</body>
+</html>

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Acadêmico de Excelência - 30 Anos de Excelência</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <!-- Header com menu de navegação -->
     <header id="header">
         <div class="header-container">
             <div class="logo">
-                <img src="./img/brasão-iae.png" alt="Logo Universidade IAE">
+                <a href="#home"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
                 <div class="logo-text">
                     <h1>Instituto Acadêmico de Excelência (IAE)</h1>
                     <p>30 anos transformando vidas</p>
@@ -19,11 +20,19 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Início</a></li>
+                    <!-- <li><a href="#home">Início</a></li> -->
                     <li><a href="#about">Sobre</a></li>
-                    <li><a href="#courses">Cursos</a></li>
-                    <li><a href="#research">Pesquisa</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa e Extensão</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Sistemas</a>
+                        <div class="dropdown-content">
+                            <a href="https://portaldoaluno.universidadeverde.edu.br" target="_blank">Portal do Aluno</a>
+                            <a href="https://portalprof.universidadeverde.edu.br" target="_blank">Portal do Professor</a>
+                            <a href="https://biblioteca.universidadeverde.edu.br" target="_blank">Biblioteca Virtual</a>
+                        </div>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,7 +70,7 @@
         <!-- Seção de números -->
         <section class="numbers">
             <div class="numbers-container">
-                <h2 class="section-title">Nossos Números</h2>
+                <h2 class="section-title" style="color: #fff">Nossos Números</h2>
                 <div class="numbers-grid">
                     <div class="number-item">
                         <div class="number">30</div>
@@ -99,11 +108,12 @@
             <div class="footer-links">
                 <h4>Links Rápidos</h4>
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#courses">Cursos</a></li>
-                    <li><a href="#research">Pesquisa</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="campi.html#campi">Cursos</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa&Extensão</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -166,6 +176,26 @@
                     });
                 }
             });
+        });
+
+        // Adicionar efeito de hover no dropdown
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                this.querySelector('.dropdown-content').style.display = 'block';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                this.querySelector('.dropdown-content').style.display = 'none';
+            });
+        });
+
+        // Fechar dropdown ao clicar em qualquer lugar da página
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+            }
         });
     </script>
 </body>

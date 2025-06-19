@@ -1,0 +1,87 @@
+/* Seção de Campi */
+        .campuses {
+            background-color: var(--branco);
+            padding: 5rem 2rem;
+        }
+
+        .campuses-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .campus-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .campus-tab {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--cinza);
+            border: none;
+            border-radius: 30px;
+            margin: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .campus-tab:hover {
+            background-color: var(--verde-claro);
+        }
+
+        .campus-tab.active {
+            background-color: var(--verde-primario);
+            color: var(--branco);
+        }
+
+        .campus-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .campus-content.active {
+            display: block;
+        }
+
+        .campus-info {
+            background-color: var(--cinza);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .campus-info h3 {
+            color: var(--verde-primario);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .courses-list, .labs-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .courses-list li, .labs-list li {
+            background-color: var(--branco);
+            padding: 0.8rem;
+            border-radius: 5px;
+            list-style: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .courses-list li:hover, .labs-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .campus-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
