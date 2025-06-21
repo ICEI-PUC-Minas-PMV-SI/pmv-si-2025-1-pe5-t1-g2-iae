@@ -17,7 +17,7 @@
 -
 
 ### Denis Alves da Silva Leite
--
+- Elaboração dos tópicos Armazenmento de Informação, e do Monitoramento, e revisão do PSI
 -
 -
 
