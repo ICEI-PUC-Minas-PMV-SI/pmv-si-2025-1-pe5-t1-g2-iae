@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Acadêmico de Excelência - Login</title>
+    <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <!-- Header com menu de navegação -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="./img/brasao-iae.png" alt="Logo Universidade IAE"></a>
+                <div class="logo-text">
+                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+                    <p>30 anos transformando vidas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <!-- <li><a href="#home">Início</a></li> -->
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa e Extensão</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Sistemas</a>
+                        <div class="dropdown-content">
+                            <a href="login.html" target="_blank">Login</a>
+                            <a href="https://biblioteca.universidadeverde.edu.br" target="_blank">Biblioteca Virtual</a>
+                        </div>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Conteúdo principal -->
+  <div class="login-container">
+    <div class="login-box">
+      
+      <!-- Abas de seleção -->
+      <div class="login-tabs">
+        <div class="login-tab active" data-tab="aluno">Aluno</div>
+        <div class="login-tab"       data-tab="professor">Professor</div>
+      </div>
+
+      <!-- Formulário único -->
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input id="login" name="login" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input id="password" name="password" type="password" />
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="./img/brasao-iae.png" alt="Logo Universidade IAE">
+                    <div class="footer-logo-text">
+                        <h3>Instituto Acadêmico de Excelência</h3>
+                    </div>
+                </div>
+                <p>Transformando vidas através da educação há 30 anos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="campi.html#campi">Cursos</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa&Extensão</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Rua do Conhecimento, 123</p>
+                <p>Bairro Universitário</p>
+                <p>CEP: 12345-678</p>
+                <p>contato@universidadeiae.edu.br</p>
+                <p>(31) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Instituto Acadêmico de Excelência - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animação ao rolar a página
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.anniversary-text, .anniversary-image, .number-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+        };
+
+        // Verifica a posição dos elementos quando a página carrega
+        window.addEventListener('load', animateOnScroll);
+        // Verifica a posição dos elementos quando ocorre scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Suaviza o scroll para os links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Adicionar efeito de hover no dropdown
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                this.querySelector('.dropdown-content').style.display = 'block';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                this.querySelector('.dropdown-content').style.display = 'none';
+            });
+        });
+
+        // Fechar dropdown ao clicar em qualquer lugar da página
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+            }
+        });
+    </script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

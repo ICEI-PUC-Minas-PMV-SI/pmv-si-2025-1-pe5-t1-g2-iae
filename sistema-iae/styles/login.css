@@ -1,0 +1,69 @@
+/* Centraliza toda a tela em verde */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--verde-primario);
+}
+
+/* Caixa branca de login */
+.login-box {
+  background: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 320px;
+  padding: 24px;
+}
+
+/* Abas */
+.login-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--verde-secundario);
+  margin-bottom: 16px;
+}
+.login-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  cursor: pointer;
+  color: var(--preto);
+  font-weight: 500;
+}
+.login-tab.active {
+  border-bottom: 4px solid var(--verde-primario);
+  color: var(--verde-primario);
+}
+
+/* Formulário */
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: var(--preto);
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão Entrar */
+.btn-login {
+  width: 100%;
+  background: var(--verde-primario);
+  color: var(--branco);
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-login:hover {
+  background: var(--verde-secundario);
+}

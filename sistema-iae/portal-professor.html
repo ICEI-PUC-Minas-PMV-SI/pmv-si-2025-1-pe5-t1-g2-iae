@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Acadêmico de Excelência - Portal do Professor</title>
+    <link rel="shortcut icon" href="./img/brasão-verde.ico type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="./styles/portal-professor.css">
+</head>
+<body>
+    <!-- Header com menu de navegação -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="indext.html"><img src="./img/brasao-iae.png" alt="Logo Universidade IAE"></a>
+                <div class="logo-text">
+                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+                    <p>30 anos transformando vidas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <!-- <li><a href="#home">Início</a></li> -->
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa e Extensão</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Sistemas</a>
+                        <div class="dropdown-content">
+                            <a href="login.html" target="_blank">Login</a>
+                            <a href="Acesso-Biblioteca.html" target="_blank">Biblioteca Virtual</a>
+                        </div>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Conteúdo principal -->
+<main class="professor-dashboard">
+
+  <!-- Painel do Professor -->
+  <section class="card header-card">
+    <div class="header-content">
+      <div class="header-left">
+        <h1><i class="fas fa-chalkboard-teacher"></i> Portal do Professor</h1>
+        <nav class="breadcrumb">
+          <a href="#">Início</a> › 
+          <span>Informações do Professor</span>
+        </nav>
+      </div>
+      <button class="btn-primary">SALVAR</button>
+    </div>
+  </section>
+
+  <!-- Abas -->
+  <ul class="tabs">
+    <li class="active"      data-tab="geral">Geral</li>
+    <li                     data-tab="disciplinas">Disciplinas</li>
+    <li                     data-tab="financeiro">Financeiro</li>
+  </ul>
+
+  <!-- Aba: Geral -->
+  <section id="geral" class="tab-content active">
+    <section class="card overview-card">
+      <div class="photo-block">
+        <img src="./img/professor.jpg" alt="Foto do Professor">
+        <a href="#" class="link-action">+ Adicionar Foto</a>
+      </div>
+      <div class="info-block">
+        <div><label>Nome</label><p>Prof. João Silva</p></div>
+        <div><label>SIAPE</label><p>1234567</p></div>
+        <div><label>Login</label><p>jsilva</p></div>
+        <div><label>Último acesso</label><p class="text-info">15/06/2025</p></div>
+        <div><label>Senha</label><p>********</p></div>
+      </div>
+    </section>
+    <section class="card grid-card">
+      <div class="grid">
+        <div><label>Departamento</label><p>Engenharia de Software</p></div>
+        <div><label>Titulação</label><p>Doutor em Computação</p></div>
+        <div><label>E-mail Institucional</label><p>joao.silva@universidade.br</p></div>
+        <div><label>Telefone</label><p>(31) 99876-5432</p></div>
+        <div><label>Data de Contratação</label><p>01/03/2018</p></div>
+        <div><label>Tempo de Serviço</label><p>7 anos e 3 meses</p></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Aba: Disciplinas -->
+  <section id="disciplinas" class="tab-content">
+    <section class="card">
+      <h2>Lista de alunos</h2>
+      <div class="grid aluno-list">
+        <div class="aluno">
+          <img src="./img/avatar-aluno.png" alt="João">
+          <p>João</p>
+        </div>
+        <div class="aluno">
+          <img src="./img/avatar-aluno.png" alt="Carlos">
+          <p>Carlos</p>
+        </div>
+        <div class="aluno">
+          <img src="./img/avatar-aluno.png" alt="Maria">
+          <p>Maria</p>
+        </div>
+        <div class="aluno">
+          <img src="./img/avatar-aluno.png" alt="José">
+          <p>José</p>
+        </div>
+        <div class="aluno">
+          <img src="./img/avatar-aluno.png" alt="Gabriela">
+          <p>Gabriela</p>
+        </div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Plano de Ensino: Introdução à Engenharia de Software</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Semana</th>
+            <th>Conteúdo</th>
+            <th>Atividades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Visão geral do curso e ferramentas</td>
+            <td>Discussão em sala e setup de ambiente</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Processo de desenvolvimento de software</td>
+            <td>Estudo de caso em grupos</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Requisitos e análise de sistemas</td>
+            <td>Exercício de elicitação de requisitos</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Modelagem UML</td>
+            <td>Diagramas de casos de uso</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Arquitetura de software</td>
+            <td>Apresentação de padrões arquiteturais</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <!-- Aba: Financeiro -->
+  <section id="financeiro" class="tab-content">
+    <section class="card">
+      <h2>Contratos</h2>
+      <button class="btn-secondary">Fazer Download do Contrato</button>
+    </section>
+    <section class="card table-card">
+      <h2>Resumo Financeiro</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Quantidade de horas por semestre</td>
+            <td>200 horas</td>
+          </tr>
+          <tr>
+            <td>Valor por hora/aula</td>
+            <td>R$ 80,00</td>
+          </tr>
+          <tr>
+            <td>Sugestão de carga horária</td>
+            <td>150 horas</td>
+          </tr>
+          <tr>
+            <td>Previsão de pagamento</td>
+            <td>Até dia 10 de cada mês</td>
+          </tr>
+          <tr>
+            <td>Histórico de repasses</td>
+            <td><a href="#" class="link-action">Ver histórico</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="./img/brasao-iae.png" alt="Logo Universidade IAE">
+                    <div class="footer-logo-text">
+                        <h3>Instituto Acadêmico de Excelência</h3>
+                    </div>
+                </div>
+                <p>Transformando vidas através da educação há 30 anos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="campi.html">Nossos Campi</a></li>
+                    <li><a href="campi.html#campi">Cursos</a></li>
+                    <li><a href="pesquisa-e-extensao.html">Pesquisa&Extensão</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Rua do Conhecimento, 123</p>
+                <p>Bairro Universitário</p>
+                <p>CEP: 12345-678</p>
+                <p>contato@universidadeiae.edu.br</p>
+                <p>(31) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Instituto Acadêmico de Excelência - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animação ao rolar a página
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.anniversary-text, .anniversary-image, .number-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+        };
+
+        // Verifica a posição dos elementos quando a página carrega
+        window.addEventListener('load', animateOnScroll);
+        // Verifica a posição dos elementos quando ocorre scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Suaviza o scroll para os links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Adicionar efeito de hover no dropdown
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                this.querySelector('.dropdown-content').style.display = 'block';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                this.querySelector('.dropdown-content').style.display = 'none';
+            });
+        });
+
+        // Fechar dropdown ao clicar em qualquer lugar da página
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+            }
+        });
+    </script>
+    <script src="./js/portal-professor.js"></script>
+</body>
+</html>

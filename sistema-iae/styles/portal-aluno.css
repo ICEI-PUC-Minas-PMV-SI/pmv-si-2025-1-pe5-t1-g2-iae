@@ -1,0 +1,182 @@
+/* ========================================
+   Portal do Aluno – portal-aluno.css
+   ======================================== */
+
+/* Espaçamento para compensar o header fixo */
+main.student-dashboard {
+  /* Ajuste este valor conforme a altura real do seu header + breadcrumb */
+  padding-top: 100px;
+}
+
+/* Container principal */
+.student-dashboard {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: "Roboto Slab", serif;
+  color: #333;
+}
+
+/* ========================================
+   Cards
+   ======================================== */
+.card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
+/* Header Card (Painel do Aluno) */
+.header-card {
+  margin-top: 20px;           /* Espaço extra caso o padding-top não seja suficiente */
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.header-card .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-card h1 {
+  font-size: 1.8rem;
+  color: #00542e;
+}
+.btn-primary {
+  background: #00542e;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.breadcrumb {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+.breadcrumb a {
+  color: #00542e;
+  text-decoration: none;
+}
+.breadcrumb span {
+  color: #777;
+}
+
+/* ========================================
+   Abas
+   ======================================== */
+.tabs {
+  display: flex;
+  gap: 32px;
+  margin: 16px 0;
+  border-bottom: 2px solid #eee;
+}
+.tabs li {
+  list-style: none;
+  padding-bottom: 8px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+}
+.tabs li.active {
+  color: #00542e;
+  border-bottom: 3px solid #00542e;
+}
+
+/* Controle de exibição das abas */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* ========================================
+   Aba: Geral – Overview Card
+   ======================================== */
+.overview-card {
+  display: flex;
+  gap: 32px;
+}
+.photo-block img {
+  width: 160px;
+  border-radius: 4px;
+}
+.link-action {
+  display: block;
+  margin-top: 8px;
+  color: #00542e;
+  font-size: 0.9rem;
+}
+.info-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.info-block label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #777;
+}
+.info-block p {
+  font-size: 1rem;
+  margin-top: 4px;
+}
+.text-danger {
+  color: #c00;
+}
+
+/* ========================================
+   Cartões genéricos de grade de campos
+   ======================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.grid label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #666;
+}
+.grid p,
+.grid input {
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+.grid input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+/* ========================================
+   Aba: Dados Médicos / Endereços (mesmo estilo grid)
+   ======================================== */
+/* Já usam o .grid acima e .card para disposição */
+
+/* ========================================
+   Aba: Geral – Tabela de Matrícula
+   ======================================== */
+.table-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #00542e;
+}
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.table-card th,
+.table-card td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.table-card th {
+  background: #f0f0f0;
+  text-align: left;
+}
