@@ -1,5 +1,5 @@
 /* Reset e estilos base */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -159,6 +159,24 @@ main {
     transition: all 0.3s ease;
     border: 2px solid var(--verde-primario);
     animation: fadeIn 1.5s ease-in-out;
+}
+.btn-voltar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Verde Bootstrap */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #0a0001;
 }
 
 .btn:hover {
@@ -479,22 +497,4 @@ footer {
     .anniversary-image {
         min-width: 100%;
     }
-    .btn-Voltar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #28a745; /* Verde Bootstrap */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease;
-
-
-.btn-Voltar:hover {
-    background-color: #218838;
-}
-    }
+  
