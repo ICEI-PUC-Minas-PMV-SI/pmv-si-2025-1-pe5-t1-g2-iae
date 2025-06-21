@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso Biblioteca</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <div class="login-container" style="text-align: center; margin-top: 10%;">
+    <img src="img/brasão-iae.png" alt="Logo IAE" width="100">
+    <h2>Digite sua matrícula e senha para acessar a Biblioteca</h2>
+
+    <input type="text" id="matricula" placeholder="Matrícula do Aluno"><br><br>
+    <input type="password" id="senha" placeholder="Senha"><br><br>
+    <button onclick="verificarAcesso()">Entrar</button>
+
+    <p id="mensagem" style="color: red;"></p>
+  </div>
+
+  <script>
+  function verificarAcesso() {
+      const matricula = document.getElementById("matricula").value.trim();
+      const senha = document.getElementById("senha").value.trim();
+
+      const senhaCorreta = "iae2025";
+
+      // Você pode criar uma lógica para validar a matrícula também, se desejar.
+      if (matricula === "") {
+        document.getElementById("mensagem").innerText = "Por favor, insira sua matrícula.";
+      } else if (senha !== senhaCorreta) {
+        document.getElementById("mensagem").innerText = "Senha incorreta!";
+      } else {
+        // OK: redireciona para a página da biblioteca
+        window.location.href = "Biblioteca.html";
+      }
+    }
+  </script>
+</body>
+</html>
