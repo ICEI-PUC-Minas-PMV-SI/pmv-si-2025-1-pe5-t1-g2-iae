@@ -77,14 +77,14 @@ header.scrolled {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #28a745; /* Verde Bootstrap */
-    color: white;
-    padding: 10px 20px;
+    background-color: #f8faf9; /* Verde Bootstrap */
+    color: rgb(17, 1, 1);
+    padding: 5px 10px;
     border: none;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(10, 0, 0, 0.938);
     transition: background-color 0.3s ease;
 }
 

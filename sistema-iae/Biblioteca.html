@@ -1,98 +1,178 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Biblioteca</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!-- mesmo estilo do index -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Acadêmico de Excelência - 30 Anos de Excelência</title>
-    <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
 
-        h1 {
-            text-align: center;
-        }
+    h1 {
+      text-align: center;
+    }
 
-        .formulario {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    .formulario {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-        .formulario label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+    .formulario label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-        .formulario input[type="text"],
-        .formulario input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 2px solid #006341;
-            border-radius: 5px;
-        }
+    .formulario input[type="text"],
+    .formulario input[type="number"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #006341;
+      border-radius: 5px;
+    }
 
-        .formulario button {
-            width: 100%;
-            padding: 10px;
-            background-color: #006341;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    .formulario button {
+      width: 48%;
+      padding: 10px;
+      background-color: #006341;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        .formulario button:hover {
-            background-color: #006341;
-        }
-    </style>
+    .formulario button:hover {
+      background-color: #004f33;
+    }
+
+    .btn-voltar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #008a50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #mensagem {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-   
-    <!-- Cabeçalho (pode copiar o do index) -->
-    <header>
-       <div class="logo">
-                <a href="#home"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
-                <div class="logo-text">
-                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
-                    <p>30 anos transformando vidas</p>
-                </div>
-         </div> <!-- menu de navegação aqui -->
-         <a href="Acesso-Biblioteca.html"><button>voltar</button>
-        </a><!-- Conteúdo principal da biblioteca -->
-    </header>
-    <main>
-     <h1>Consulta de Livros - Biblioteca</h1>
+
+  <header>
+    <div class="logo">
+      <a href="#home"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
+      <div class="logo-text">
+        <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+        <p>30 anos transformando vidas</p>
+      </div>
+    </div>
+    <a href="Acesso-Biblioteca.html" class="btn-voltar">← Voltar</a>
+  </header>
+
+  <main>
+    <h1>Consulta de Livros - Biblioteca</h1>
 
     <div class="formulario">
-        <label for="nome">Título do Livro:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o título do livro">
+      <label for="nome">Título do Livro:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite o título do livro">
 
-        <label for="ISBN">ISBN:</label>
-        <input type="number" id="ISBN" name="ISBN" placeholder="Digite ISBN">
+      <label for="ISBN">ISBN:</label>
+      <input type="text" id="ISBN" name="ISBN" placeholder="Digite ISBN">
 
-        <label for="Autor">Autor do Livro:</label>
-        <input type="text" id="Autor" name="Autor" placeholder="Digite o nome do autor">
+      <label for="Autor">Autor do Livro:</label>
+      <input type="text" id="Autor" name="Autor" placeholder="Digite o nome do autor">
 
-        <button type="submit">Buscar</button>
+      <div style="display: flex; justify-content: space-between; gap: 10px;">
+        <button onclick="buscarLivro()">Buscar</button>
+        <button onclick="cadastrarLivro()">Cadastrar Livro</button>
+      </div>
+
+      <p id="mensagem"></p>
     </div>
+  </main>
 
-    </main>
+  <script>
+    const storageKey = "livros";
 
-   
-  
+    function getLivros() {
+      return JSON.parse(localStorage.getItem(storageKey)) || [];
+    }
+
+    function setLivros(lista) {
+      localStorage.setItem(storageKey, JSON.stringify(lista));
+    }
+
+    function cadastrarLivro() {
+      const nome = document.getElementById("nome").value.trim();
+      const isbn = document.getElementById("ISBN").value.trim();
+      const autor = document.getElementById("Autor").value.trim();
+
+      if (!nome || !autor) {
+        mostrarMensagem("Título e Autor são obrigatórios.", "red");
+        return;
+      }
+
+      const livros = getLivros();
+
+      livros.push({
+        id: livros.length + 1,
+        titulo: nome,
+        isbn,
+        autor,
+        dataCadastro: new Date().toLocaleString()
+      });
+
+      setLivros(livros);
+      mostrarMensagem(`Livro "${nome}" cadastrado com sucesso!`, "green");
+      limparFormulario();
+    }
+
+    function buscarLivro() {
+      const nome = document.getElementById("nome").value.trim().toLowerCase();
+      const livros = getLivros();
+      const encontrados = livros.filter(livro =>
+        livro.titulo.toLowerCase().includes(nome)
+      );
+
+      if (encontrados.length > 0) {
+        mostrarMensagem(`🔍 ${encontrados.length} livro(s) encontrados com "${nome}". Confira no console.`, "green");
+        console.table(encontrados);
+      } else {
+        mostrarMensagem("Nenhum livro encontrado com esse título.", "red");
+      }
+    }
+
+    function limparFormulario() {
+      document.getElementById("nome").value = "";
+      document.getElementById("ISBN").value = "";
+      document.getElementById("Autor").value = "";
+    }
+
+    function mostrarMensagem(texto, cor) {
+      const mensagem = document.getElementById("mensagem");
+      mensagem.innerText = texto;
+      mensagem.style.color = cor;
+    }
+  </script>
 
 </body>
 </html>
