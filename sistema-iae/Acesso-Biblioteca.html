@@ -84,7 +84,22 @@
 
     <p id="mensagem" style="color: red;"></p>
   </div>
+<script>
+  function verificarAcesso() {
+    const matricula = document.getElementById("matricula").value.trim();
+    const senha = document.getElementById("senha").value.trim();
 
+    const senhaCorreta = "iae2025"; // <- aqui está a senha padrão
+
+    if (matricula === "") {
+      document.getElementById("mensagem").innerText = "Por favor, insira sua matrícula.";
+    } else if (senha !== senhaCorreta) {
+      document.getElementById("mensagem").innerText = "Senha incorreta!";
+    } else {
+      window.location.href = "Biblioteca.html"; // Redireciona após login
+    }
+  }
+</script>
   
 </body>
 </html>

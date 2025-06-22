@@ -73,7 +73,24 @@ header.scrolled {
     font-size: 0.9rem;
     opacity: 0.9;
 }
+.btn-voltar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Verde Bootstrap */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
 
+.btn-voltar:hover {
+    background-color: #0a0001;
+}
 /* Menu de navegação */
 nav ul {
     display: flex;
@@ -160,24 +177,7 @@ main {
     border: 2px solid var(--verde-primario);
     animation: fadeIn 1.5s ease-in-out;
 }
-.btn-voltar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #28a745; /* Verde Bootstrap */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease;
-}
 
-.btn-voltar:hover {
-    background-color: #0a0001;
-}
 
 .btn:hover {
     background-color: transparent;
