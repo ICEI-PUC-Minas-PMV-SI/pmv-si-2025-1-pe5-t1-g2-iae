@@ -1,105 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="styles/style.css"> <!-- mesmo estilo do index -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css"> <!-- mesmo estilo do index -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Acadêmico de Excelência - 30 Anos de Excelência</title>
     <link rel="shortcut icon" href="./img/brasão-verde.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-            background-color: #f4f4f4;
-        }
+   
 
-        h1 {
-            text-align: center;
-        }
 
-        .formulario {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .formulario label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .formulario input[type="text"],
-        .formulario input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 2px solid #0056b3;
-            border-radius: 5px;
-        }
-
-        .formulario button {
-            width: 100%;
-            padding: 10px;
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .formulario button:hover {
-            background-color: #003d80;
-        }
-    </style>
-    
-    
 </head>
+
 <body>
-  <header>
-       <div class="logo">
-                <a href="#home"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
-                <div class="logo-text">
-                    <h1>Instituto Acadêmico de Excelência (IAE)</h1>
-                    <p>30 anos transformando vidas</p>
-                </div>
-         </div> <!-- menu de navegação aqui -->
-      <a href="index.html"><button>voltar</button>
-      </a><!-- Conteúdo principal da biblioteca -->
+    <header>
+        <div class="logo">
+            <a href="#home"><img src="./img/brasão-iae.png" alt="Logo Universidade IAE"></a>
+            <div class="logo-text">
+                <h1>Instituto Acadêmico de Excelência (IAE)</h1>
+                <p>30 anos transformando vidas</p>
+            </div>
+        </div> <!-- menu de navegação aqui -->
+        <a href="index.html"><button>voltar</button>
+        </a><!-- Conteúdo principal da biblioteca -->
     </header>
-       
-  
-  <div class="login-container" style="text-align: center; margin-top: 15%;">
-       <h2>Digite sua matrícula e senha para acessar a Biblioteca</h2>
 
-    <input type="text" id="matricula" placeholder="Matrícula do Aluno"><br><br>
-    <input type="password" id="senha" placeholder="Senha"><br><br>
-    <button onclick="verificarAcesso()">Entrar</button>
 
-    <p id="mensagem" style="color: red;"></p>
-  </div>
-<script>
-  function verificarAcesso() {
-    const matricula = document.getElementById("matricula").value.trim();
-    const senha = document.getElementById("senha").value.trim();
+    <div class="login-container" style="text-align: center; margin-top: 15%;">
+        <h2>Digite sua matrícula e senha para acessar a Biblioteca</h2>
 
-    const senhaCorreta = "iae2025"; // <- aqui está a senha padrão
+        <input type="text" id="matricula" placeholder="Matrícula do Aluno"><br><br>
+        <input type="password" id="senha" placeholder="Senha"><br><br>
+        <button onclick="verificarAcesso()">Entrar</button>
 
-    if (matricula === "") {
-      document.getElementById("mensagem").innerText = "Por favor, insira sua matrícula.";
-    } else if (senha !== senhaCorreta) {
-      document.getElementById("mensagem").innerText = "Senha incorreta!";
-    } else {
-      window.location.href = "Biblioteca.html"; // Redireciona após login
-    }
-  }
-</script>
-  
+        <p id="mensagem" style="color: red;"></p>
+    </div>
+    <script>
+        function verificarAcesso() {
+            const matricula = document.getElementById("matricula").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+
+            const senhaCorreta = "iae2025"; // <- aqui está a senha padrão
+
+            if (matricula === "") {
+                document.getElementById("mensagem").innerText = "Por favor, insira sua matrícula.";
+            } else if (senha !== senhaCorreta) {
+                document.getElementById("mensagem").innerText = "Senha incorreta!";
+            } else {
+                window.location.href = "Biblioteca.html"; // Redireciona após login
+            }
+        }
+    </script>
+
 </body>
+
 </html>
