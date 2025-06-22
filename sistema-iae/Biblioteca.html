@@ -147,20 +147,16 @@
     }
 
     function buscarLivro() {
-      const nome = document.getElementById("nome").value.trim().toLowerCase();
-      const livros = getLivros();
-      const encontrados = livros.filter(livro =>
-        livro.titulo.toLowerCase().includes(nome)
-      );
+     const nome = document.getElementById("nome").value.trim().toLowerCase();
+     const livros = getLivros();
+     const encontrados = livros.filter(livro =>
+     livro.titulo.toLowerCase().includes(nome)
+  );
 
-      if (encontrados.length > 0) {
-        mostrarMensagem(`🔍 ${encontrados.length} livro(s) encontrados com "${nome}". Confira no console.`, "green");
-        console.table(encontrados);
-      } else {
-        mostrarMensagem("Nenhum livro encontrado com esse título.", "red");
-      }
+     localStorage.setItem("resultadosBusca", JSON.stringify(encontrados));
+     window.location.href = "ResultadoBusca.html";
     }
-
+    
     function limparFormulario() {
       document.getElementById("nome").value = "";
       document.getElementById("ISBN").value = "";

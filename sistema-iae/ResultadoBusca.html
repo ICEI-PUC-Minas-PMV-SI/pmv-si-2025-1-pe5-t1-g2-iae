@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados da Busca</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .livro {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Resultados da Busca</h1>
+  <div id="resultados"></div>
+
+  <script>
+    const resultados = JSON.parse(localStorage.getItem("resultadosBusca")) || [];
+
+    const container = document.getElementById("resultados");
+
+    if (resultados.length === 0) {
+      container.innerHTML = "<p>Nenhum livro encontrado.</p>";
+    } else {
+      resultados.forEach(livro => {
+        const div = document.createElement("div");
+        div.className = "livro";
+        div.innerHTML = `
+          <strong>Título:</strong> ${livro.titulo}<br>
+          <strong>Autor:</strong> ${livro.autor}<br>
+          <strong>ISBN:</strong> ${livro.isbn || 'Não informado'}<br>
+          <strong>Data de Cadastro:</strong> ${livro.dataCadastro}
+        `;
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
