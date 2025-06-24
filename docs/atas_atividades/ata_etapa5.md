@@ -26,6 +26,5 @@
 -
 
 ### Sávio Sérgio Pereira da Silva
--
--
--
+- Correções das etapas passadas
+- Apresentação do projeto
