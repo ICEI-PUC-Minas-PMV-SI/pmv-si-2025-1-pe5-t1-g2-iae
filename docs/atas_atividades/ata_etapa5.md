@@ -25,7 +25,7 @@
 - Elaboração do documento final no template em LaTex;
 - Ajustes nos slides da apresentação;
 - Apresentação do projeto;
-- Ajustes no Github do projeto: adicionar arquivos entregues durante o semestre e criação de dois arquivos README.md
+- Ajustes no Github do projeto: adicionar arquivos entregues durante o semestre, criação de dois arquivos "README.md" e edição do arquivo "CITATION.cff".
 
 ### Sávio Sérgio Pereira da Silva
 - Correções das etapas passadas
