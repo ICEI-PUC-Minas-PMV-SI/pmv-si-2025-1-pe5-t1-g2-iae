@@ -11,8 +11,8 @@
 -
 
 ### Beatriz Pereira da Costa
--
--
+- Desenvolvimento do CRUD (Back-end + Banco de Dados)
+- Desenvolvimento da Apresentação (contribuição coletiva)
 -
 
 ### Denis Alves da Silva Leite
