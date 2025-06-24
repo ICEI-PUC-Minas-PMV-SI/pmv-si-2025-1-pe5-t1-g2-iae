@@ -1,5 +1,5 @@
 cff-version: 1.0.1
-message: Please cite this software using these metadata.
+message: "Please cite this software using these metadata."
 title: "Projeto de Infraestrutura de Redes do Instituto Acadêmico de Excelência (IAE)"
 authors:
   - family-names: "Junqueira"
@@ -19,12 +19,12 @@ authors:
     family-names: "Cordeiro"
     given-names: "Fábio"
 keywords:
-  - Infraestrutura de Redes
-  - Virtualização;
-  - Serviços em Nuvem
-  - Segurança da Informação
-  - Monitoramento de Redes
+  - "Infraestrutura de Redes"
+  - "Virtualização"
+  - "Serviços em Nuvem"
+  - "Segurança da Informação"
+  - "Monitoramento de Redes"
 repository-code:
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2023-06-23
+date-released: 2023-06-30
