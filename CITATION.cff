@@ -1,29 +1,30 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:
+title: "Projeto de Infraestrutura de Redes do Instituto Acadêmico de Excelência (IAE)"
 authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+  - family-names: "Junqueira"
+    given-names: "Antônio"
+  - family-names: "Silveira"
+    given-names: "Arthur"
+  - family-names: "Costa"
+    given-names: "Beatriz"
+  - family-names: "Leite"
+    given-names: "Denis"
+  - family-names: "Santos"
+    given-names: "Laís"
+  - family-names: "Silva"
+    given-names: "Sávio"
+  - name-suffix: Professor Orientador
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: "Cordeiro"
+    given-names: "Fábio"
 keywords:
-  -
-  -
+  - Infraestrutura de Redes
+  - Virtualização;
+  - Serviços em Nuvem
+  - Segurança da Informação
+  - Monitoramento de Redes
 repository-code:
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2023-06-30
+date-released: 2023-06-23
