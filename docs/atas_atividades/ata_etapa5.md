@@ -21,9 +21,11 @@
 -
 
 ### Laís Lara Ferreira dos Santos
--
--
--
+- Correções no texto do documento referente às etapas anteriores;
+- Elaboração do documento final no template em LaTex;
+- Ajustes nos slides da apresentação;
+- Apresentação do projeto;
+- Ajustes no Github do projeto: adicionar arquivos entregues durante o semestre e criação de dois arquivos README.md
 
 ### Sávio Sérgio Pereira da Silva
 - Correções das etapas passadas
