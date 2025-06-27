@@ -16,8 +16,8 @@
 -
 
 ### Denis Alves da Silva Leite
--
--
+- Desenvolvi o Front-end do sistema de Aluno/Professor
+- Contribui para a apresentação dos serviços locais: LDAP, DNS e DHCP
 -
 
 ### Laís Lara Ferreira dos Santos
